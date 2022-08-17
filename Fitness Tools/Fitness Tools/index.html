@@ -1,0 +1,76 @@
+<html>
+
+<head>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="icons/icon.png">
+    <link rel="apple-touch-icon" href="touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="touch-icon-ipad-retina.png">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Fitness Tools">
+
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js"></script>
+
+    <title>Fitness Tools</title>
+</head>
+
+<body bgcolor="#202124">
+    <img src="icons/arrow.png" onclick="refresh()" id="back" class="topleft" style="display:none; height: 40px; width: 40px; position: absolute; top: 4px;">
+
+    <div id="home">
+        <h1 id="title">null</h1>
+        <!--ICONS-->
+        <div id="icons">
+            <figure>
+                <img src="icons/timer.png" style="height: 125px; width: auto;" onclick="timer()">
+                <figcaption style="font-family: Tahoma; color:#EA80FC;">Timer</figcaption>
+            </figure>
+
+            <figure>
+                <img src="icons/calculator.png" style="height: 125px; width: auto;" onclick="calc()">
+                <figcaption style="font-family: Tahoma; color:#EA80FC;">BMI Calculator</figcaption>
+            </figure>
+
+            <figure>
+                <img src="icons/counter.png" style="height: 125px; width: auto;" onclick="counter()">
+                <figcaption style="font-family: Tahoma; color:#EA80FC;">Counter</figcaption>
+            </figure>
+
+        </div>
+        <br>
+        <!--ICONS-->
+    </div>
+
+    <div id="timer" style="display: none; position: absolute; left: 50%; margin-left: -50px; top: 50%; margin-top: -50px;">
+        <h1 id="clock">00:00</h1>
+        <ons-button id="start" modifier="quiet" style="color: #EA80FC; position:absolute; left: 15px;" onclick="startFunc()">Start</ons-button>
+
+    </div>
+
+    <div id="calc" style="display: none; position: absolute; left: 50%; margin-left: -50px; top: 50%; margin-top: -50px;">
+
+        <input placeholder="Enter your weight (lbs)" style="background:transparent; border:none; border-bottom: 1px solid #c0c0c0; padding-bottom: 3px; position:relative; left: -30px; color: #c0c0c0" id="weight">
+        <p></p>
+        <input placeholder="Enter your height (in)" style="background:transparent; border:none; border-bottom: 1px solid #c0c0c0; padding-bottom: 3px; margin-right: -200px; color: #c0c0c0; position:absolute; left: -30px;" id="height">
+        <br><br>
+        <ons-button id="start" modifier="quiet" style="color: #EA80FC; position:absolute; left: 13px;" onclick="calculate()">Calculate</ons-button>
+        <br>
+        <p style="position: relative; left: -40px; color: #c0c0c0; text-align: center;" id="summary"></p>
+
+    </div>
+
+    <div id="count" style="display: none; position: absolute; left: 50%; margin-left: -50px; top: 50%; margin-top: -50px;">
+        <h1 style="color: #c0c0c0; position: absolute; right: -70;" id="add" onclick="add()">0</h1>
+    </div>
+
+
+</body>
+
+</html>

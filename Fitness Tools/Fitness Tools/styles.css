@@ -1,0 +1,50 @@
+/* Purple Color: #EA80FC */
+/* Black Color: #202124 */
+
+body {
+    font-family: Tahoma;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+
+#title {
+    color: #202124;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 40px;
+}
+
+#icons {
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+#labels {
+    color: #EA80FC;
+    padding-left: 47px;
+}
+
+#timerTitle {
+    color: #EA80FC;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 40px;
+}
+
+#start {
+    color: #EA80FC;
+}
+
+#clock {
+    color: #c0c0c0;
+    margin-bottom: 0px;
+    font-family: Tahoma;
+}
+
+::-webkit-input-placeholder{
+	color: #c0c0c0;
+}
